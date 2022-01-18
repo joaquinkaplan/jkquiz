@@ -14,31 +14,35 @@ form.addEventListener('submit', e => {
         if(answer === correctAnswers[index]){
             score += 25;
         }
-    
-    
+
+        
 //show result on page
 
-result.querySelector('span').textContent = `${score}%`;
-let none = document.querySelector('.none');
-none.classList.remove('none');
-
-let output = 0;
-const timer = setInterval(() => {
-    result.querySelector('span').textContent = `${output}%`;
-    if (output === score){
-        clearInterval(timer);
-    } else {
-        output++;
-    }
-}, 10);
-});
-
-
-
+        result.querySelector('span').textContent = `${score}%`;
+        result.classList.remove('d-none');
+        
 
 
 //THE WINDOW OBJECT: the global object in front-end JS
 //setTimeOut() & scrollTo();
 
 
+        let output = 0;
+        const timer = setInterval(() => {
+            result.querySelector('span').textContent = `${output}%`;
+            if (output === score){
+                clearInterval(timer);
+            } else {
+                output++;
+            }
+        }, 10);
+        });
+        
 
+
+
+
+
+
+    });
+    
