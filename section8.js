@@ -19,7 +19,8 @@ form.addEventListener('submit', e => {
 //show result on page
 
 result.querySelector('span').textContent = `${score}%`;
-result.classList.remove('none');
+let none = document.querySelector('.none');
+none.classList.remove('none');
 
 let output = 0;
 const timer = setInterval(() => {
