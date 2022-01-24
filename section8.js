@@ -12,11 +12,11 @@ const input4b = document.querySelectorAll('input[name="q4"]');
 const input = document.querySelectorAll('input[type="radio"]');
 
 button.disabled = true;
-input1b.forEach(answer => { answer.addEventListener("click", () => { input2a.classList.remove('d-none'); }) });
+input1b.forEach(answer => { answer.addEventListener("click", () => { input2a.classList.remove('d-none'); input2a.scrollIntoView({behavior: "smooth"}) }) });
 
-input2b.forEach(answer => { answer.addEventListener("click", () => { input3a.classList.remove('d-none'); }) });
+input2b.forEach(answer => { answer.addEventListener("click", () => { input3a.classList.remove('d-none'); input3a.scrollIntoView({behavior: "smooth"});}) });
 
-input3b.forEach(answer => { answer.addEventListener("click", () => { input4a.classList.remove('d-none'); }) });
+input3b.forEach(answer => { answer.addEventListener("click", () => { input4a.classList.remove('d-none'); input4a.scrollIntoView({behavior: "smooth"})}) });
 
 input4b.forEach(answer => { answer.addEventListener("click", () => { button.disabled = false; }) });
 
