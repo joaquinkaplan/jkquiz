@@ -10,6 +10,7 @@ const input3b = document.querySelectorAll('input[name="q3"]');
 const input4a = document.getElementById("q4");
 const input4b = document.querySelectorAll('input[name="q4"]');
 const input = document.querySelectorAll('input[type="radio"]');
+const buttonDiv = document.getElementById("btn-div");
 
 
 input1b.forEach(answer => { answer.addEventListener("click", () => { input2a.classList.remove('d-none'); input2a.scrollIntoView({behavior: "smooth"}) }) });
@@ -18,7 +19,7 @@ input2b.forEach(answer => { answer.addEventListener("click", () => { input3a.cla
 
 input3b.forEach(answer => { answer.addEventListener("click", () => { input4a.classList.remove('d-none'); input4a.scrollIntoView({behavior: "smooth"})}) });
 
-input4b.forEach(answer => { answer.addEventListener("click", () => {  button.classList.remove('d-none'); document.getElementById('btn-div').scrollIntoView({behavior: "smooth"})}) });
+input4b.forEach(answer => { answer.addEventListener("click", () => {  button.classList.remove('d-none'); buttonDiv.scrollIntoView({behavior: "smooth"})}) });
 
 
 
