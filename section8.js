@@ -1,48 +1,69 @@
 const correctAnswers = ['B', 'B', 'A', 'B'];
 const form = document.querySelector('.quiz-form');
 const result = document.getElementById("result");
+const button = document.getElementById("button");
+const input1b = document.querySelectorAll('input[name="q1"]');
+const input2a = document.getElementById("q2");
+const input2b = document.querySelectorAll('input[name="q2"]');
+const input3a = document.getElementById("q3");
+const input3b = document.querySelectorAll('input[name="q3"]');
+const input4a = document.getElementById("q4");
+const input4b = document.querySelectorAll('input[name="q4"]');
+const input = document.querySelectorAll('input[type="radio"]');
+
+button.disabled = true;
+input1b.forEach(answer => { answer.addEventListener("click", () => { input2a.classList.remove('d-none'); }) });
+
+input2b.forEach(answer => { answer.addEventListener("click", () => { input3a.classList.remove('d-none'); }) });
+
+input3b.forEach(answer => { answer.addEventListener("click", () => { input4a.classList.remove('d-none'); }) });
+
+input4b.forEach(answer => { answer.addEventListener("click", () => { button.disabled = false; }) });
+
+
 
 form.addEventListener('submit', e => {
     e.preventDefault();
     scrollTo(0, 0);
 
     let score = 0;
-    const userAnswers = [form.q1.value, form.q2.value, form.q3.value, form.q4.value];
 
     //check answers
+    const userAnswers = [form.q1.value, form.q2.value, form.q3.value, form.q4.value];
+
     userAnswers.forEach((answer, index) => {
-        if(answer === correctAnswers[index]){
+        if (answer === correctAnswers[index]) {
             score += 25;
         }
 
-        
-//show result on page
+
+        //show result on page
 
         result.querySelector('span').textContent = `${score}%`;
         result.classList.remove('d-none');
-        
 
 
-//THE WINDOW OBJECT: the global object in front-end JS
-//setTimeOut() & scrollTo();
+
+        //THE WINDOW OBJECT: the global object in front-end JS
+        //setTimeOut() & scrollTo();
 
 
         let output = 0;
         const timer = setInterval(() => {
             result.querySelector('span').textContent = `${output}%`;
-            if (output === score){
+            if (output === score) {
                 clearInterval(timer);
             } else {
                 output++;
             }
         }, 10);
-        });
-        
-
-
-
-
-
-
     });
-    
+
+
+
+
+
+
+
+});
+
