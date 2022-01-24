@@ -18,7 +18,7 @@ input2b.forEach(answer => { answer.addEventListener("click", () => { input3a.cla
 
 input3b.forEach(answer => { answer.addEventListener("click", () => { input4a.classList.remove('d-none'); input4a.scrollIntoView({behavior: "smooth"})}) });
 
-input4b.forEach(answer => { answer.addEventListener("click", () => {  button.classList.remove('d-none'); button.scrollIntoView({behavior: "smooth"})}) });
+input4b.forEach(answer => { answer.addEventListener("click", () => {  button.classList.remove('d-none'); document.querySelector('.button').scrollIntoView({behavior: "smooth"})}) });
 
 
 
@@ -32,7 +32,6 @@ document.getElementById('lets-see').innerHTML = "Let's see how you did...";
 
     //check answers
     const userAnswers = [form.q1.value, form.q2.value, form.q3.value, form.q4.value];
-    
 
     userAnswers.forEach((answer, index) => {
         if (answer === correctAnswers[index]) {
