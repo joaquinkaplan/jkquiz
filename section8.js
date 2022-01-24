@@ -25,6 +25,8 @@ input4b.forEach(answer => { answer.addEventListener("click", () => { button.disa
 form.addEventListener('submit', e => {
     e.preventDefault();
     scrollTo(0, 0);
+form.classList.add('d-none');
+document.getElementById('lets-see').innerHTML = "Let's see how you did...";
 
     let score = 0;
 
