@@ -18,7 +18,7 @@ input2b.forEach(answer => { answer.addEventListener("click", () => { input3a.cla
 
 input3b.forEach(answer => { answer.addEventListener("click", () => { input4a.classList.remove('d-none'); input4a.scrollIntoView({behavior: "smooth"})}) });
 
-input4b.forEach(answer => { answer.addEventListener("click", () => {  button.classList.remove('d-none'); document.querySelector('.button').scrollIntoView({behavior: "smooth"})}) });
+input4b.forEach(answer => { answer.addEventListener("click", () => {  button.classList.remove('d-none'); document.getElementById('btn-div').scrollIntoView({behavior: "smooth"})}) });
 
 
 
